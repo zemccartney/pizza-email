@@ -1,0 +1,179 @@
+<!-- xhtml 1.0 strict is used b/c gmail and outlook use it by default --> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<title>square gallery | Newsletter</title>
+        <style type="text/css">
+		</style>
+    </head>
+    <body>
+    	<center>
+            <!-- body table is full width of window; width of email is dictated by attributes on tables in cells of email container table --> 
+        	<table border="2" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            	<tr>
+                	<td align="center" valign="top" id="bodyCell">
+                    	<!-- // BEGIN EMAIL -->
+                        <!-- email container is ALSO full width of window; width of email is dictated by attributes on tables in cells of email container table....WHY??? -->
+                        <table border="6" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
+                        	<tr>
+                            	<td align="center" valign="top" id="heroImageContainer">
+
+									<!-- // HERO IMAGE BLOCK HERE // -->
+                                    <!-- // BEGIN HERO BLOCK -->
+
+                                    <!-- What's up with the width and heights? 
+                                    arbitrary? based on aspect ratio of image? the image looks shittier when these dimensions are altered contrary to aspect ratio... Appear to be unnecessary... -->       <img src="../../html-email-files/img/in_the_conservatory.jpg" alt="In The Conservatory, by Édouard Manet" height="415" width="520" id="heroImage" />
+                                    <!-- END HERO BLOCK // -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" id="introductionContainer">
+
+									<!-- // INTRODUCTION BLOCK HERE // -->
+             <!-- // BEGIN INTRO BLOCK -->
+             <!-- Why the wrapping table? -->
+             <!-- Whenever you have subsections within a section, add a table, subdivide by rows and cells -->
+             <!-- NOTE: Width is set on the table --> 
+        <table border="0" cellpadding="0" cellspacing="0" width="520" id="introductionBlock">
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="center" valign="top" class="introductionLogo">
+                                <a href="#" target="_blank" title="square gallery"><img src="../../html-email-files/img/logo.png" alt="square gallery" height="165" width="150" /></a>
+                            </td>
+                            <td align="left" valign="middle" class="introductionHeading">
+                                presents
+                                <br />
+                                <h1>The Works of Édouard Manet</h1>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" class="introductionContent">
+                    Starting on October 12th and running for three weeks, square gallery is proud and excited to display a selection of 6 pieces of the work of Édouard Manet, the French master painter of the great Impressionist and Realist movements of the 17th century. 
+                </td>
+            </tr>
+        </table>
+        <!-- END INTRO BLOCK // -->
+                        
+
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" id="callToActionContainer">
+
+									 <!-- // BEGIN CALL-TO-ACTION BLOCK -->
+                    <!-- AGAIN, WIDTH IS SET ON TABLES WITHIN BODY ELEMENT CELLS; You control dimensions of email here -->
+        <table border="0" cellpadding="0" cellspacing="0" width="520" id="callToActionBlock">
+            <tr>
+                <td align="center" valign="top" class="callToActionContent">
+                    <!-- Related content not broken into multiple rows but separated via line breaks -->
+                    <h3>The Works of Édouard Manet:<br />A Live Tour With Clémence Rousseau</h3>
+                    <br />
+                    Friday nights at 8:00PM throughout the exhibition, French art critic and Manet expert Clémence Rousseau will be examining the 6 pieces featured, providing deep insights into Manet’s genius and his beautiful artwork. Register early, as space is limited.
+                </td>
+            </tr>
+            <tr>
+                <!-- BUTTONS ARE TABLES -->
+                <td align="center" valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+                        <tr>
+                            <td align="center" valign="top" class="callToActionButtonContent">
+                                <a href="#" target="_blank" title="square gallery">Register Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- //END CALL-TO-ACTION BLOCK -->
+
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" id="eventContainer">
+
+									 <!-- // BEGIN EVENT BLOCK -->
+                <!-- Why is this block wider than others?  --> 
+        <table border="0" cellpadding="0" cellspacing="0" width="600" id="eventBlock">
+            <tr>
+                <td align="center" valign="top" id="eventBlockCell">
+                    <!-- // START 1ST INNER TABLE -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="left" valign="top" class="eventBlockHeading">
+                                <h2>Upcoming Events</h2>
+                            </td>
+                        </tr>
+                        <!-- 2nd row i.e. line in this section --> 
+                        <tr>
+                            <!-- every row needs a cell, only cell in this row, contains a table --> 
+                            <td align="center" valign="top">
+                                <!-- // START 2ND INNER TABLE ; note: width is full-->
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <!-- single row table --> 
+                                    <tr>
+                                        <!-- 2 cells in the single row --> 
+                                        <!-- first contains a table -->
+                                        <td align="center" valign="top">
+                                            <!-- // START 3RD INNER TABLE -->
+                                            <!-- First 110 pixels of this table row are a cell containing a table with 2 rows i.e. 2 lines -->
+                                            <!-- SUPER FUCKING COOL --> 
+                                            <table border="0" cellpadding="0" cellspacing="0" width="110" class="eventBlockCalendar">
+                                                <!-- Rows stack on top of one another -->
+                                                <tr>
+                                                    <td align="center" valign="top" class="eventBlockMonth">
+                                                        NOV
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top" class="eventBlockDay">
+                                                        7
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td align="left" valign="top" class="eventContent">
+                                            <h3>localArTLanta</h3>
+                                            <strong>Running November 7 through December 14</strong>
+                                            <br />
+                                            An exhibition of Atlanta’s finest local artists in a broad selection of media ranging from painting to sculpture to perfomance art.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- END EVENT BLOCK // -->
+
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" id="merchandiseContainer">
+
+									<!-- // MERCHANDISE BLOCK HERE // -->
+
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" id="footerContainer">
+
+									<!-- // FOOTER BLOCK HERE // -->
+
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- END EMAIL // -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
