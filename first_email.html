@@ -8,6 +8,100 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Pizza Gallery | My First SNOOZEletter</title>
     <style type="text/css">
+      /* So table borders scream, make testing when bg colors set easier */
+      table {
+        border-color: red;
+      }
+
+      /*////// RESET STYLES //////*/
+			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+			/* helps ensure tables don't accrue additional spacing */	
+			table{border-collapse:collapse;}
+			img, a img{border:0; outline:none; text-decoration:none;}
+			
+			/* different clients add on inconsistent spacing */
+			h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+			p{margin: 1em 0;}
+
+
+      /*////// CLIENT-SPECIFIC RESET STYLES //////*/
+      /* EDIT CLASSES OUTLOOK ADDS TO EVERY EMAIL */
+			/* WEB-BASED OUTLOOK */
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+
+			/* //// DESKTOP OUTLOOK */
+			table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+			#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+			img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+			body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+    
+      /*////// GENERAL STYLES //////*/
+/* TODO Correct font-stack?? */
+      h1, h2, h3{font-family:"Courier New", Times, serif;}
+			h1, h1 a{color:#84ff00; font-size:44px; font-weight:100; line-height:115%; }
+			h2, h2 a{color:#84ff00; font-size:34px; font-weight:100; line-height:100%; }
+			h3, h3 a{color:#84ff00; font-size:30px; font-weight:100; line-height:115%; }
+			
+			/* Why style the body tag? */
+			body, #bodyTable{background-color:#231f4d;}
+      a {color: dodgerblue;}
+      a:active {color: purple;}
+      a:visited {color: darkred;}
+      a:hover {color: blueviolet;}
+
+			/* TODO Why? What's up with this? */
+      /* Controls width of whole document; not sure why we have to care about that??
+      To ensure emails fit viewports of all clients, stretch to fill display width? */
+			#emailContainer{width:100%;}
+
+      /* Establish consistent font and font style across containers */
+      #headingContainer, #introductionContainer, #pizzaManAppearsContainer, #mainConceitContainer, #goingsOnContainer, #anecdotesContainer, #advertisementContainer, #footerContainer {font-family:"Courier New", Times, serif; color:#84ff00 }
+			
+			#headingContainer{padding: 40px;}
+      .pizzaProgram { font-size: 18px; padding: 20px; }
+      .pizzaProgram h2 { padding-bottom: 20px; font-size: 38px;}
+
+			#introductionContainer{font-size: 18px;}
+      .initiatingSequence {padding-bottom: 10px; }
+      .sequenceMetaInformation {line-height: 130%; padding: 20px; font-style: italic;}
+      .sequenceProceed {color: cornsilk; font-style:normal; padding: 10px;}
+
+			#pizzaManAppearsContainer{padding:25px;}
+      .pizzamanHello {font-size: 22px;}
+
+			#mainConceitContainer{padding:40px; font-size: 18px; line-height: 125%;}
+      .conceitContent {padding: 10px 0px;}
+      .brownSquirt {color: saddlebrown; font-style: italic;}
+
+			#goingsOnContainer{padding:40px; font-size: 18px; color: aqua; line-height: 125%;}
+      .goingsOnContent {padding: 10px 0px;}
+      .goingsOnContent li {padding: 5px 0px;}
+
+      #anecdotesContainer {padding: 20px; font-size: 18px;}
+      #anecdotesBlock {background-color: #84ff00; color: #231f4d;}
+      .anecdotes_specialTrixelian h2 {color: #231f4d; font-weight: bold;}
+      .anecdotes_specialTrixelian { padding: 15px 0px;}
+      .anecdotes_TRIXELIANname, .anecdotes_TRIXELIANname a {color: #231f4d; font-weight: bold;}
+      .anecdotes_TRIXELIANname {background-color: aqua;}
+      .anecdotes_TRIXELIANprofileTrixel {background-color: #231f4d;}
+      .anecdotesCell {padding: 10px;}
+      
+
+      #advertisementContainer {color: yellow; font-size: 18px; font-style: italic;}
+      #advertisementContainer h2, #advertisementContainer h3 { color: deeppink;}
+      .advertisementHeading {padding: 8px}
+      .advertiser {padding: 15px 0px;}
+
+			#footerContainer{padding:40px;}
+      .unsubscribeButton {background-color: #f7981e; font-size: 20px; border-radius: 8px; font-weight: bold;}
+      .unsubscribeButton a {color: #231f4d;}
+      .unsubscribeButton a:link {text-decoration: none;}
+      .unsubscribeButtonContent {padding: 8px 5px;}
+      
+      
+    
     </style>
   </head>
 
@@ -48,26 +142,27 @@
                   <table id="introductionBlock" width="600px" border="1" cellpadding="0" cellspacing="0">
                     <tr>
                       <td class="initiatingSequence" align="left" valign="center">
-                        [ initiating sequence ... ]
+                        [ INITIATING SEQUENCE ... ]
                       </td>
                     </tr>
                     <tr>
                       <td align="left" valign="center">
-                        <table class="sequenceMetaInformation" border="1" cellpadding="0" cellspacing="0" border="1" border-style="dotted">
+                        <table border="1" cellpadding="0" cellspacing="0"  >
                           <tr>
-                            <td>
+                            <td class="sequenceMetaInformation">
                               <!-- STYLE NOTE: text should be much smaller -->
-                              ENTRY 001<br>
+                              ENTRY 001 <br>
                             CloudPatch v.0.0.4<br>
                             experimental<br>
                             fragments assembled<br>
                             dump cleared<br>
-                            PLEASE PROCEED<br>
                             </td>
                           </tr> 
-                        </table>
-                       
+                        </table>  
                       </td>
+                    </tr>
+                    <tr>
+                      <td class="sequenceProceed"> --- PLEASE PROCEED ---</td>
                     </tr>
                   </table>
                   <!-- /// END INTRODUCTION BLOCK -->
@@ -113,23 +208,22 @@
                           </tr>
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
-                              I used to be a frequent TRIXELian, this cloud-corner's preeminent scrub knight. I sent out a <a href="LINK TO TRIXEL TIMES?" >weekly newspaper</a> filled with bad puns and half-baked crust. We were friends here 
-                              in the cloud. Or at least I spazzed the comments and some of you spazzed back. Some of you even rose to join me as <a href="LINK TO BROWN TABLE SOMEHOW?">Knights of the Brown Table.</a>
+                              I used to be a frequent TRIXELian, this cloud-corner's preeminent scrub knight. I sent out a <a href="LINK TO TRIXEL TIMES?" >weekly newspaper</a> filled with bad puns and half-baked crust. I spazzed the comments and some of you spazzed back. Some of you even rose to join me as <a href="LINK TO BROWN TABLE SOMEHOW?">Knights of the Brown Table.</a>
                             </td>
                           </tr>
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
-                              But that was ages ago! Empty has grown the box and hard on the gut wears the beyond-borderline cold pizza remains. I speak to you now from far away. I will do what we can, as we all try to in this hustle and bustle world o' ours
+                              But that was ages ago! Empty has grown the box and hard on the gut wears the beyond-borderline cold pizza remains. I speak to you now from far away.
                             </td>
                           </tr>
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
-                              Where is far away? I can't righty say...I was lamping in my home, <a href="PIZZA PLAINS TRIXEL">the Pizza Plains</a> then <span color="brown">squirt squirt squish</span> I was evaporated and dumped in a grand machine room.
+                              Where is far away? I can't righty say...I was lamping in my home, <a href="PIZZA PLAINS TRIXEL">the Pizza Plains</a> then <span class="brownSquirt">squirt squirt squish</span> I was evaporated and dumped in a grand machine room.
                             </td>
                           </tr>
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
-                              No dankly cramped dungeon, mind you. Huge terminals all about. Interfaces to...beyond comprehension. Channels and tubes and wirings of billions of colors, pigments my mozzarella-ball optical appratus can barely process. Though it's not all so delirious. Some terminals show homely scenes from around the TRIXELian Cloud; I even sometimes glimpse my dear old Pizza Plains. And there are loads of super-comfy wheely chairs to boot. The whole place, plated in warm metal that feels like shag carpet on my threadbare pizzaFeet
+                               Huge terminals all about. Interfaces to...beyond comprehension. Channels and tubes and wirings of billions of colors, pigments my mozzarella-ball optical appratus can barely process. Though it's not all so delirious. Some terminals show homely scenes from around the TRIXELian Cloud; I even sometimes glimpse my dear old Pizza Plains. And there are loads of super-comfy wheely chairs to boot. The whole place, plated in warm metal that feels like shag carpet on my threadbare pizzaFeet
                             </td>
                           </tr>
                           <tr>
@@ -185,8 +279,8 @@
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" valign="top">
-                          <table width="100%" border="1" cellpadding="0" cellspacing="0">
+                        <td align="center" valign="top" class="anecdotesCell">
+                          <table width="100%" border="1" cellpadding="0" cellspacing="0" class="specialTrixelianInfo">
                             <tr>
                               <td align="center" valign="center">
                                 <table width="200px" border="1" cellpadding="0" cellspacing="0" class="anecdotes_TRIXELIANprofile">
@@ -203,7 +297,7 @@
                                 </table>
                               </td>
                               <td align="center" valign="center" class="anecdotesContent">
-                                All of us here wish dear <a href="http://trixel.io/#feed:alfredo" target="_blank" title="View Alfredo's patch of cloud cave">Alfredo</a> good travels. The cloud worms have chosen him and are descending upon him even as fire off these glowing letters to you all. Wish him good colonic travels!
+                                All of us here wish dear <a href="http://trixel.io/#feed:alfredo" target="_blank" title="View Alfredo's patch of cloud cave">Alfredo</a> good travels. The cloud worms have chosen him and are descending upon him even as I fire off these glowing letters to you all. Wish him good colonic travels!
                               </td>
                             </tr>
                           </table>
@@ -223,7 +317,7 @@
                       </td>
                     </tr>
                     <tr align="center" valign="center" class"advertisementPitch">
-                      <td>This garlic-butter-charged tirade is simulatacast straight to your domes by <br> <h3>Sweet Boi’s Ranch Puffs</h3><br>No one puffs their cream-dough fuller with spiced mayo than Sweet Boi</td>
+                      <td>This garlic-butter-charged tirade is simulatacast straight to your domes by <h3 class="advertiser">Sweet Boi’s Ranch Puffs</h3>No one puffs their cream-dough fuller with spiced mayo than Sweet Boi</td>
                     </tr>
                   </table>
                   <!-- /// END ADVERTISEMENT BLOCK -->
@@ -239,7 +333,7 @@
                       <table border="1" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
                         <tr>
                           <td align="center" valign="middle" class="unsubscribeButtonContent">
-                              <a href="#" target="_blank" title="">Unsubscribe</a>
+                              <a href="#" target="_blank" title="">UNSUBSCRIBE</a>
                           </td>
                         </tr>
                       </table>
