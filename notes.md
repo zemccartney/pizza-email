@@ -24,3 +24,7 @@ PROCESS
 - set width of a whole section on outermost table
 - set width of blocks within a section on inner tables
 - outermost td, containing blocks: label with id of XXX-Container, where XXX describes the section
+- You can't adjust table padding, only cell padding
+    - tables contain, Structure i.e only for delimiting sections e.g. background colors
+    - cells delimit content areas i.e. blocks, so place styling hooks (classes, ids)
+    for adjusting content location, spacing (padding), etc. on cells
