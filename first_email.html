@@ -148,15 +148,16 @@
         */
         #mainConceitWidthRestrictor, #goingsOnWidthRestrictor, .unsubscribeButton  { width: 100%}
 
-        /* TODO Make Special Trixelian section 2-column; Then, DONE!!
-        aside from
+        /* TODO
         - content edits
         - adding required footer
         - testing
         - sending to Sam for review
-        - sub-in actual content
+        - sub-in actual content for logos, links, profile pics, etc. (just Alfredo's picture)
         - FIX TRIXEL LOGO COLORS / GET LOGO
         */
+        td[class="anecdotesContent"], td[class="anecdotesSpecialTrixelian"]{display:block !important;}
+        td[class="anecdotesContent"]{padding: 20px 0 0px 0 !important; text-align: left;}
       }
     </style>
   </head>
@@ -306,7 +307,7 @@
                     <table id="goingsOnBlock" border="1" width="600px" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="right" valign="top">
-                          <table id="goingsOnWidthRestrictor" width="" border="1" cellspacing="0" cellpadding="0" >
+                          <table id="goingsOnWidthRestrictor" width="480px" border="1" cellspacing="0" cellpadding="0" >
                             <tr>
                               <td align="left" valign="top" class="goingsOnContent">
                                 The TRIXEL terminals show such vibrant scenes around our little cloud community. It does my heart good.
@@ -339,7 +340,7 @@
                         <td align="center" valign="top" class="anecdotesCell">
                           <table width="100%" border="1" cellpadding="0" cellspacing="0" class="specialTrixelianInfo">
                             <tr>
-                              <td align="center" valign="center">
+                              <td align="center" valign="center" class="anecdotesSpecialTrixelian">
                                 <table width="200px" border="1" cellpadding="0" cellspacing="0" class="anecdotes_TRIXELIANprofile">
                                   <tr>
                                     <td align="center" valign="top" class="anecdotes_TRIXELIANname">
