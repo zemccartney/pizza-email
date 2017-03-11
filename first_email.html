@@ -4,22 +4,35 @@
 <!-- TODO What's up with this namespace? -->
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+
     <!-- TODO What's up with all of this? (esp. meta) -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pizza Gallery | My First SNOOZEletter</title>
+
+    <!--
+          This email is optimized for mobile email clients, but does not
+          support the Android of iOS Gmail App, which do not support
+          Media Queries.
+
+          For more information on HTML email design and development,
+          visit http://templates.mailchimp.com
+    -->
     <style type="text/css">
       /* So table borders scream, make testing when bg colors set easier */
       table {
         border-color: red;
       }
 
+
+
       /*////// RESET STYLES //////*/
 			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
 
-			/* helps ensure tables don't accrue additional spacing */	
+			/* helps ensure tables don't accrue additional spacing */
 			table{border-collapse:collapse;}
 			img, a img{border:0; outline:none; text-decoration:none;}
-			
+
 			/* different clients add on inconsistent spacing */
 			h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
 			p{margin: 1em 0;}
@@ -36,14 +49,14 @@
 			#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
 			img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
 			body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
-    
+
       /*////// GENERAL STYLES //////*/
 /* TODO Correct font-stack?? */
       h1, h2, h3{font-family:"Courier New", Times, serif;}
 			h1, h1 a{color:#84ff00; font-size:44px; font-weight:100; line-height:115%; }
 			h2, h2 a{color:#84ff00; font-size:34px; font-weight:100; line-height:100%; }
 			h3, h3 a{color:#84ff00; font-size:30px; font-weight:100; line-height:115%; }
-			
+
 			/* Why style the body tag? */
 			body, #bodyTable{background-color:#231f4d;}
       a {color: dodgerblue;}
@@ -58,7 +71,7 @@
 
       /* Establish consistent font and font style across containers */
       #headingContainer, #introductionContainer, #pizzaManAppearsContainer, #mainConceitContainer, #goingsOnContainer, #anecdotesContainer, #advertisementContainer, #footerContainer {font-family:"Courier New", Times, serif; color:#84ff00 }
-			
+
 			#headingContainer{padding: 40px;}
       .pizzaProgram { font-size: 18px; padding: 20px; }
       .pizzaProgram h2 { padding-bottom: 20px; font-size: 38px;}
@@ -87,7 +100,8 @@
       .anecdotes_TRIXELIANname {background-color: aqua;}
       .anecdotes_TRIXELIANprofileTrixel {background-color: #231f4d;}
       .anecdotesCell {padding: 10px;}
-      
+      .anecdotesContent { font-weight: bold;}
+
 
       #advertisementContainer {color: yellow; font-size: 18px; font-style: italic;}
       #advertisementContainer h2, #advertisementContainer h3 { color: deeppink;}
@@ -99,9 +113,51 @@
       .unsubscribeButton a {color: #231f4d;}
       .unsubscribeButton a:link {text-decoration: none;}
       .unsubscribeButtonContent {padding: 8px 5px;}
-      
-      
-    
+
+      /*////// MOBILE STYLES //////*/
+
+			/*
+				CSS selectors are written in attribute
+				selector format to prevent Yahoo Mail
+				from rendering media query styles on
+				desktop.
+			*/
+
+
+      @media only screen and (max-width: 480px){
+				/*////// RESET STYLES //////*/
+        /* ADJUSTS PADDING AROUND CONTENT CONTAINERS TO BE PROPORTIONAL TO SMALLER SCREEN */
+        td[id="headingContainer"], td[id="introductionContainer"], td[id="pizzaManAppearsContainer"], td[id="mainConceitContainer"], td[id="goingsOnContainer"], td[id="anecdotesContainer"], td[id="advertisementContainer"], td[id="footerContainer"]{padding-right:10px !important; padding-left:10px !important;}
+
+        /* RESIZES ALL CONTENT BLOCKS TO SMALLER SIZE, ADAPTED TO MEDIA QUERY WIDTH */
+        table[id="headingBlock"], table[id="introductionBlock"], table[id="pizzaManAppearsBlock"], table[id="mainConceitBlock"], table[id="goingsOnBlock"], table[id="anecdotesBlock"], table[id="advertisementBlock"], table[id="footerBlock"]{max-width:480px !important; width:100% !important;}
+
+        /*////// CLIENT-SPECIFIC STYLES //////*/
+        body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+
+        /*////// GENERAL STYLES //////*/
+        h1{font-size:34px !important;}
+				h2{font-size:30px !important;}
+				h3{font-size:24px !important;}
+
+        /* Scales width restrictors, prevents them from overflowing entire document,
+        which causes horizonal scrolling for ALL rows, entire document
+        i.e. document width expands to match widest element
+        Fixed widths fuck with padding and content block adjustments above
+        */
+        #mainConceitWidthRestrictor, #goingsOnWidthRestrictor, .unsubscribeButton  { width: 100%}
+
+        /* TODO Make Special Trixelian section 2-column; Then, DONE!!
+        aside from
+        - content edits
+        - adding required footer
+        - testing
+        - sending to Sam for review
+        - sub-in actual content
+        - FIX TRIXEL LOGO COLORS / GET LOGO
+        */
+      }
     </style>
   </head>
 
@@ -115,7 +171,7 @@
         <tr>
           <!-- TODO Why do you wrap everything in a cell? What if you wrapped things in just a table? -->
           <td align="center" valign="top" id="bodyCell">
-            
+
             <!-- // BEGIN EMAIL -->
             <table border="1" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
               <tr>
@@ -130,7 +186,8 @@
                     <tr>
                       <td align="left" valign="top" class="pizzaProgram">
                         <h2>$ > PIZZALOG_</h2>
-                        A program of cerebral transmissions from <a href="http://trixel.io/#feed:pizzaman" target="_blank" title="View Pizzman's patch of cloud cave">Pizzaman</a>, deep within the machinery of the Cloud </td>
+                        A program of cerebral transmissions from <a href="http://trixel.io/#feed:pizzaman" target="_blank" title="View Pizzman's patch of cloud cave">Pizzaman</a>, deep within the machinery of the Cloud
+                      </td>
                     </tr>
                   </table>
                   <!-- /// END HEADING BLOCK -->
@@ -141,7 +198,7 @@
                   <!-- /// BEGIN INTRODUCTION BLOCK -->
                   <table id="introductionBlock" width="600px" border="1" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td class="initiatingSequence" align="left" valign="center">
+                      <td class="initiatingSequence" align="left" valign="middle">
                         [ INITIATING SEQUENCE ... ]
                       </td>
                     </tr>
@@ -151,14 +208,14 @@
                           <tr>
                             <td class="sequenceMetaInformation">
                               <!-- STYLE NOTE: text should be much smaller -->
-                              ENTRY 001 <br>
-                            CloudPatch v.0.0.4<br>
-                            experimental<br>
-                            fragments assembled<br>
-                            dump cleared<br>
+                              ENTRY 001 <br />
+                            CloudPatch v.0.0.4<br />
+                            experimental<br />
+                            fragments assembled<br />
+                            dump cleared<br />
                             </td>
-                          </tr> 
-                        </table>  
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                     <tr>
@@ -171,14 +228,14 @@
               <tr>
                 <td align="center" valign="center" id="pizzaManAppearsContainer">
                   <!-- /// BEGIN PIZZAMAN APPEARS BLOCK -->
-                  <table class="pizzaManAppears" border="1" cellpadding="0" cellspacing="0" width="600px">
+                  <table id="pizzaManAppearsBlock" border="1" cellpadding="0" cellspacing="0" width="600px">
                     <tr>
                       <td align="center" valign="center" class="pizzamanLogo">
                        <img src="https://gallery.mailchimp.com/e3b073a4a4ce4a19d248f0ae7/images/4c94b37c-68ab-47fc-8070-11f63dc26777.png" alt="Avatar of the pizzaman of TRIXEL" height="125" width="125"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" valign="center" class="pizzamanHello">HELLO, good TRIXELians...</td>             
+                      <td align="center" valign="center" class="pizzamanHello">HELLO, good TRIXELians...</td>
                     </tr>
                   </table>
                   <!-- /// END PIZZAMAN APPEARS BLOCK -->
@@ -194,7 +251,7 @@
                     <tr>
                       <!-- Is this id necessary? -->
                       <td align="left" valign="top">
-                        <table id="mainConceitWidthRestrictor" width="480" border="1" cellspacing="0" cellpadding="0" >
+                        <table id="mainConceitWidthRestrictor" width="480px" border="1" cellspacing="0" cellpadding="0" >
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
                               It has been so long.
@@ -228,7 +285,7 @@
                           </tr>
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
-                              Beneath the phantasmagoria and pictures of TRIXEL-life, there's the compact machine from which I transmit to you now: a simple black screen and blinking green prompt that read "Pizzaman, transmit"; and the attendant cerebroplug, freshly deglazed, cleaned, and scented. When I approached and plugged myself, a sweet disembodied voice rang overhead: "You are now connected back to TRIXEL. Chat em up if you wish". And, so, well, here we are. <br> I will transmit again when I can.
+                              Beneath the phantasmagoria and pictures of TRIXEL-life, there's the compact machine from which I transmit to you now: a simple black screen and blinking green prompt that read "Pizzaman, transmit"; and the attendant cerebroplug, freshly deglazed, cleaned, and scented. When I approached and plugged myself, a sweet disembodied voice rang overhead: "You are now connected back to TRIXEL. Chat em up if you wish". And, so, well, here we are. <br /> I will transmit again when I can.
                             </td>
                           </tr>
                           <tr>
@@ -249,7 +306,7 @@
                     <table id="goingsOnBlock" border="1" width="600px" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="right" valign="top">
-                          <table id="goingsOnWidthRestrictor" width="480" border="1" cellspacing="0" cellpadding="0" >
+                          <table id="goingsOnWidthRestrictor" width="" border="1" cellspacing="0" cellpadding="0" >
                             <tr>
                               <td align="left" valign="top" class="goingsOnContent">
                                 The TRIXEL terminals show such vibrant scenes around our little cloud community. It does my heart good.
@@ -328,18 +385,17 @@
                   <!-- /// BEGIN FOOTER BLOCK -->
                   <table width="600px" id="footerBlock" border="1" cellpadding="0" cellspacing="0">
                     <tr>
+                      <td align="center">
                       <!-- TODO Set button to 100% width on phone range -->
                       <!-- TODO Why does width at a % relative to page width? or top-level table width?, not of parent table? -->
-                      <table border="1" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
-                        <tr>
-                          <td align="center" valign="middle" class="unsubscribeButtonContent">
+                        <table border="1" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
+                          <tr>
+                            <td align="center" valign="middle" class="unsubscribeButtonContent">
                               <a href="#" target="_blank" title="">UNSUBSCRIBE</a>
-                          </td>
-                        </tr>
-                      </table>
-                    </tr>
-                    <tr>
-                      
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
                     </tr>
                   </table>
                   <!-- /// END FOOTER BLOCK -->
