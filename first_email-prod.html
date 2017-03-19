@@ -104,13 +104,14 @@
       .anecdotesContent { font-weight: bold;}
 
       #juniorPizzamanContainer{padding:40px; font-size: 18px; line-height: 125%;}
-      #juniorPizzamanContainer h3 {text-align:center;}
+      #juniorPizzamanContainer h4 {text-align:center; color: aqua;}
       .juniorPizzamanContent {padding: 10px 0px;}
       .juniorPizzamanJob {color: red;}
       .juniorPizzamanButton {background-color: #f7981e; font-size: 20px; border-radius: 8px; font-weight: bold;}
       .juniorPizzamanButton a {color: #231f4d;}
       .juniorPizzamanButton a:link {text-decoration: none;}
       .juniorPizzamanButtonContent {padding: 8px 5px;}
+      #juniorPizzamanSpacer {padding-top: 40px;}
 
       #advertisementContainer {color: yellow; font-size: 18px; font-style: italic;}
       #advertisementContainer h2, #advertisementContainer h3 { color: deeppink;}
@@ -156,7 +157,7 @@
         i.e. document width expands to match widest element
         Fixed widths fuck with padding and content block adjustments above
         */
-        #mainConceitWidthRestrictor, #goingsOnWidthRestrictor, .unsubscribeButton  { width: 100%}
+        #mainConceitWidthRestrictor, #goingsOnWidthRestrictor, .juniorPizzamanButton, .unsubscribeButton  { width: 100%}
 
         td[class="anecdotesContent"], td[class="anecdotesSpecialTrixelian"]{display:block !important;}
         td[class="anecdotesContent"]{padding: 20px 0 0px 0 !important; text-align: left;}
@@ -170,17 +171,17 @@
     <center>
 
       <!-- TODO What are all these attributes and why do you set them? -->
-      <table border="1" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
         <tr>
           <!-- TODO Why do you wrap everything in a cell? What if you wrapped things in just a table? -->
           <td align="center" valign="top" id="bodyCell">
 
             <!-- // BEGIN EMAIL -->
-            <table border="1" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
               <tr>
                 <td align="center" valign="top" id="headingContainer">
                   <!-- /// BEGIN HEADING BLOCK -->
-                  <table id="headingBlock" border="1" cellpadding="0" cellspacing="0" width="600px">
+                  <table id="headingBlock" border="0" cellpadding="0" cellspacing="0" width="600px">
                     <tr>
                       <td align="center" valign="top" class="headingLogo">
                         <h1><a href="http://trixel.io" target="_blank" title="Visit TRIXEL">TRIXEL</a></h1><!--<img TRIXEL LOGO />? -->
@@ -199,7 +200,7 @@
               <tr>
                 <td align="center" valign="top" id="introductionContainer">
                   <!-- /// BEGIN INTRODUCTION BLOCK -->
-                  <table id="introductionBlock" width="600px" border="1" cellpadding="0" cellspacing="0">
+                  <table id="introductionBlock" width="600px" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td class="initiatingSequence" align="left" valign="middle">
                         [ INITIATING SEQUENCE ... ]
@@ -207,7 +208,7 @@
                     </tr>
                     <tr>
                       <td align="left" valign="center">
-                        <table border="1" cellpadding="0" cellspacing="0"  >
+                        <table border="0" cellpadding="0" cellspacing="0"  >
                           <tr>
                             <td class="sequenceMetaInformation">
                               <!-- STYLE NOTE: text should be much smaller -->
@@ -231,7 +232,7 @@
               <tr>
                 <td align="center" valign="center" id="pizzaManAppearsContainer">
                   <!-- /// BEGIN PIZZAMAN APPEARS BLOCK -->
-                  <table id="pizzaManAppearsBlock" border="1" cellpadding="0" cellspacing="0" width="600px">
+                  <table id="pizzaManAppearsBlock" border="0" cellpadding="0" cellspacing="0" width="600px">
                     <tr>
                       <td align="center" valign="center" class="pizzamanLogo">
                        <img src="https://gallery.mailchimp.com/e3b073a4a4ce4a19d248f0ae7/images/4c94b37c-68ab-47fc-8070-11f63dc26777.png" alt="Avatar of the pizzaman of TRIXEL" height="125" width="125"/>
@@ -247,14 +248,14 @@
               <tr>
                 <td align="center" valign="top" id="mainConceitContainer">
                   <!-- /// BEGIN MAIN CONCEIT BLOCK -->
-                  <table id="mainConceitBlock" width="600px"  border="1" cellpadding="0" cellspacing="0">
+                  <table id="mainConceitBlock" width="600px"  border="0" cellpadding="0" cellspacing="0">
                     <!-- TODO: How can you stagger text in a way that stays responsive? set
                     to width of media query? Or a little less than that
                     -->
                     <tr>
                       <!-- Is this id necessary? -->
                       <td align="left" valign="top">
-                        <table id="mainConceitWidthRestrictor" width="480px" border="1" cellspacing="0" cellpadding="0" >
+                        <table id="mainConceitWidthRestrictor" width="480px" border="0" cellspacing="0" cellpadding="0" >
                           <tr>
                             <td align="left" valign="top" class="conceitContent">
                               It has been so long.
@@ -306,10 +307,10 @@
               <tr>
                 <td align="center" valign="top" id="goingsOnContainer" >
                   <!-- /// BEGIN GOINGS ON BLOCK -->
-                    <table id="goingsOnBlock" border="1" width="600px" cellpadding="0" cellspacing="0">
+                    <table id="goingsOnBlock" border="0" width="600px" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="right" valign="top">
-                          <table id="goingsOnWidthRestrictor" width="480px" border="1" cellspacing="0" cellpadding="0" >
+                          <table id="goingsOnWidthRestrictor" width="480px" border="0" cellspacing="0" cellpadding="0" >
                             <tr>
                               <td align="left" valign="top" class="goingsOnContent">
                                 The TRIXEL terminals show such vibrant scenes around our little cloud community. It does my heart good.
@@ -333,7 +334,7 @@
               <tr>
                 <td align="center" valign="top" id="anecdotesContainer">
                   <!-- /// BEGIN ANECDOTES BLOCK -->
-                  <table width="600px" border="1" cellpadding="0" cellspacing="0" id="anecdotesBlock">
+                  <table width="600px" border="0" cellpadding="0" cellspacing="0" id="anecdotesBlock">
                       <tr>
                         <td align="center" valign="top" class="anecdotes_specialTrixelian">
                           <h2>OUR SPECIAL TRIXELIAN</h2>
@@ -341,10 +342,10 @@
                       </tr>
                       <tr>
                         <td align="center" valign="top" class="anecdotesCell">
-                          <table width="100%" border="1" cellpadding="0" cellspacing="0" class="specialTrixelianInfo">
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" class="specialTrixelianInfo">
                             <tr>
                               <td align="center" valign="center" class="anecdotesSpecialTrixelian">
-                                <table width="200px" border="1" cellpadding="0" cellspacing="0" class="anecdotes_TRIXELIANprofile">
+                                <table width="200px" border="0" cellpadding="0" cellspacing="0" class="anecdotes_TRIXELIANprofile">
                                   <tr>
                                     <td align="center" valign="top" class="anecdotes_TRIXELIANname">
                                       <h3><a href="http://trixel.io/#feed:alfredo" target="_blank" title="View Alfredo's patch of cloud cave">ALFREDO</a></h3>
@@ -371,7 +372,7 @@
               <tr>
                 <td align="center" valign="top" id="juniorPizzamanContainer">
                   <!-- /// BEGIN JUNIOR PIZZAMAN BLOCK -->
-                  <table width="600px" border="1" id="juniorPizzamanBlock" cellpadding="0" cellspacing="0">
+                  <table width="600px" border="0" id="juniorPizzamanBlock" cellpadding="0" cellspacing="0">
                     <tr>
                       <td align="center" valign="center" class="juniorPizzamanHeading">
                         <h2>HELP WANTED</h2>
@@ -389,7 +390,7 @@
                     </tr>
                     <tr>
                       <td align="left" valign="center" class="juniorPizzamanContent">
-                        <h3>RESPONSIBILITIES</h3>
+                        <h4>&lt;&lt;&lt;RESPONSIBILITIES&gt;&gt;&gt;</h4>
                         <ul>
                           <li>Comment supportively on other TRIXELians' work</li>
                           <li>Flag offensive content as inappropriate</li>
@@ -399,7 +400,7 @@
                     </tr>
                     <tr>
                       <td align="left" valign="center" class="juniorPizzamanContent">
-                        <h3>REWARD</h3>
+                        <h4>&lt;&lt;&lt;REWARD&gt;&gt;&gt;</h4>
                         <ul>
                           <li>Special exclusive badge on your profile</li>
                           <li>Our undying cheesy love ;)</li>
@@ -412,8 +413,8 @@
                       </td>
                     </tr>
                     <tr>
-                      <td align="center">
-                        <table border="1" cellpadding="0" cellspacing="0" width="400px" class="juniorPizzamanButton">
+                      <td align="center" id="juniorPizzamanSpacer">
+                        <table border="0" cellpadding="0" cellspacing="0" width="400px" class="juniorPizzamanButton">
                           <tr>
                             <td align="center" valign="middle" class="juniorPizzamanButtonContent">
                               <a href="mailto:pizza@yrn.io?subject=I%20Want%20To%20Be%20Pizzaspawn" title="">GIMME PIZZZAAAA</a>
@@ -429,7 +430,7 @@
               <tr>
                 <td align="center" valign="top" id="advertisementContainer">
                   <!-- /// BEGIN ADVERTISEMENT BLOCK -->
-                  <table width="600px"  border="1" id="advertisementBlock" cellpadding="0" cellspacing="0">
+                  <table width="600px"  border="0" id="advertisementBlock" cellpadding="0" cellspacing="0">
                     <tr>
                       <td align="center" valign="center" class="advertisementHeading">
                         <h2>ADVERTISEMENT BELOW</h2>
@@ -445,12 +446,12 @@
               <tr>
                 <td align="center" valign="top" id="footerContainer">
                   <!-- /// BEGIN FOOTER BLOCK -->
-                  <table width="600px" id="footerBlock" border="1" cellpadding="0" cellspacing="0">
+                  <table width="600px" id="footerBlock" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td align="center">
                       <!-- TODO Set button to 100% width on phone range -->
                       <!-- TODO Why does width at a % relative to page width? or top-level table width?, not of parent table? -->
-                        <table border="1" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
+                        <table border="0" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
                           <tr>
                             <td align="center" valign="middle" class="unsubscribeButtonContent">
                               <a href="#" target="_blank" title="">UNSUBSCRIBE</a>
