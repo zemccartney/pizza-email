@@ -18,13 +18,13 @@ https://litmus.com/blog/the-tyranny-of-tables-why-web-and-email-design-are-so-di
 [-] Sketch and present a design to Sam
 [ ] read up on html attributes and html tables (W3C)
 
-[] Work through these: https://webdesign.tutsplus.com/series/mastering-html-email--webdesign-17696 
+[] Work through these: https://webdesign.tutsplus.com/series/mastering-html-email--webdesign-17696
 [] Create plaintext version of email???
 [] What doctypes do mail clients use by default?
 [] Read programming beyond practices article on getting unstuck
 [] NEED A TRIXEL LOGO AND OTHER ASSETS
 [] FIT ALTERED REFERENCE INTO EMAIL
-[] MAKE RESPONSIVE
+[-] MAKE RESPONSIVE
 [] TEST
 
 
