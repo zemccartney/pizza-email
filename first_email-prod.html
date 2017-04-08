@@ -1,11 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- use xhtml1.0 strict doctype declaration because Gmail and Outlook use it by default -->
 
-<!-- TODO What's up with this namespace? -->
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
 
-    <!-- TODO What's up with all of this? (esp. meta) -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pizza Gallery | My First SNOOZEletter</title>
@@ -20,9 +17,13 @@
     -->
     <style type="text/css">
       /* So table borders scream, make testing when bg colors set easier */
+      /*
+      COMMENT OUT FOR UPLOADING TO MAILCHIMP; COLOR OVERRIDES COLOR SET ON DIVIDER
+      Inlined to divider tables by this: https://templates.mailchimp.com/resources/inline-css/
       table {
         border-color: red;
       }
+      */
 
 
 
@@ -118,11 +119,15 @@
       .advertisementHeading {padding: 8px}
       .advertiser {padding: 15px 0px;}
 
-			#footerContainer{padding:40px;}
-      .unsubscribeButton {background-color: #f7981e; font-size: 20px; border-radius: 8px; font-weight: bold;}
+      #dividerBlockContainer{padding:40px 0 0 0;}
+
+			#footerContainer{padding:20px;}
+      .unsubscribeButton {padding-top: 40px; background-color: #e6e6e6; font-size: 20px; border-radius: 8px; font-weight: bold;}
       .unsubscribeButton a {color: #231f4d;}
       .unsubscribeButton a:link {text-decoration: none;}
       .unsubscribeButtonContent {padding: 8px 5px;}
+      #MailChimpListDescription {padding: 0 0 20px 0;}
+      .footerFinePrint {padding-top: 50px; font-size: 10px;}
 
       /*////// MOBILE STYLES //////*/
 
@@ -137,10 +142,10 @@
       @media only screen and (max-width: 480px){
 				/*////// RESET STYLES //////*/
         /* ADJUSTS PADDING AROUND CONTENT CONTAINERS TO BE PROPORTIONAL TO SMALLER SCREEN */
-        td[id="headingContainer"], td[id="introductionContainer"], td[id="pizzaManAppearsContainer"], td[id="mainConceitContainer"], td[id="goingsOnContainer"], td[id="anecdotesContainer"], td[id="juniorPizzamanContainer"], td[id="advertisementContainer"], td[id="footerContainer"]{padding-right:10px !important; padding-left:10px !important;}
+        td[id="headingContainer"], td[id="introductionContainer"], td[id="pizzaManAppearsContainer"], td[id="mainConceitContainer"], td[id="goingsOnContainer"], td[id="anecdotesContainer"], td[id="juniorPizzamanContainer"], td[id="advertisementContainer"], td[id="dividerBlockContainer"], td[id="footerContainer"]{padding-right:10px !important; padding-left:10px !important;}
 
         /* RESIZES ALL CONTENT BLOCKS TO SMALLER SIZE, ADAPTED TO MEDIA QUERY WIDTH */
-        table[id="headingBlock"], table[id="introductionBlock"], table[id="pizzaManAppearsBlock"], table[id="mainConceitBlock"], table[id="goingsOnBlock"], table[id="anecdotesBlock"], table[id="juniorPizzamanBlock"], table[id="advertisementBlock"], table[id="footerBlock"]{max-width:480px !important; width:100% !important;}
+        table[id="headingBlock"], table[id="introductionBlock"], table[id="pizzaManAppearsBlock"], table[id="mainConceitBlock"], table[id="goingsOnBlock"], table[id="anecdotesBlock"], table[id="juniorPizzamanBlock"], table[id="advertisementBlock"], table[id="dividerBlock"], table[id="footerBlock"]{max-width:480px !important; width:100% !important;}
 
         /*////// CLIENT-SPECIFIC STYLES //////*/
         body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
@@ -444,9 +449,42 @@
                 </td>
               </tr>
               <tr>
+                <!--
+                  commented out b/c apparently email clients don't allow hr elements?
+                  <td align="center" valign="top" id="footerBreakContainer">
+                    <table width="600px" id="footerBreakBlock" border="0" cellpadding="0" cellspacing="0">
+                      <td>
+                        <hr class="footerBreak">
+                      </td>
+                    </table>
+                  </td>
+                -->
+
+                <td align="center" valign="top" id="dividerBlockContainer">
+
+                  <!-- /// BEGIN DIVIDER BLOCK -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="600px" id="dividerBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tr>
+                      <td class="mcnDividerBlockInner" style="padding: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 2px;border-top-style: solid;border-top-color: #84ff00;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                          <tr>
+                            <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              <span></span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- /// END DIVIDER BLOCK -->
+                </td>
+              <tr>
                 <td align="center" valign="top" id="footerContainer">
                   <!-- /// BEGIN FOOTER BLOCK -->
                   <table width="600px" id="footerBlock" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td id="MailChimpListDescription" align="center" valign="middle">*|LIST:DESCRIPTION|*</td>
+                    </tr>
                     <tr>
                       <td align="center">
                       <!-- TODO Set button to 100% width on phone range -->
@@ -454,10 +492,22 @@
                         <table border="0" cellpadding="0" cellspacing="0" width="400px" class="unsubscribeButton">
                           <tr>
                             <td align="center" valign="middle" class="unsubscribeButtonContent">
-                              <a href="#" target="_blank" title="">UNSUBSCRIBE</a>
+                              <a href="http://trixel.us10.list-manage.com/unsubscribe?u=e3b073a4a4ce4a19d248f0ae7&id=b42a0359c3" target="_blank" title="">UNSUBSCRIBE</a>
                             </td>
                           </tr>
                         </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle" class="footerFinePrint">
+                        Copyright © *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved. <br />
+                        *|IFNOT:ARCHIVE_PAGE|* <br />
+                        Our mailing address is: <br />
+                        *|HTML:LIST_ADDRESS_HTML|* *|END:IF|* <br />
+                        <br />
+                        update subscription preferences  <br />
+                        <br />
+                        *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|* <br />
                       </td>
                     </tr>
                   </table>

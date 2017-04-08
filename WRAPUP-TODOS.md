@@ -1,10 +1,10 @@
 /* TODO
-- view with test mode off
-- adding required footer
-- sending to Sam for review (upload to Mailchimp)
-- testing
-- sub-in actual content for logos, links, profile pics, etc. (just Alfredo's picture)
-- FIX TRIXEL LOGO COLORS / GET LOGO
+[X] view with test mode off
+[ ] adding required footer
+[ ] sending to Sam for review (upload to Mailchimp)
+[ ] testing
+[ ] sub-in actual content for logos, links, profile pics, etc. (just Alfredo's picture)
+[ ] FIX TRIXEL LOGO COLORS / GET LOGO
 */
 
 <!-- https://litmus.com/blog/the-tyranny-of-tables-why-web-and-email-design-are-so-different
